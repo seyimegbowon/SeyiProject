@@ -44,13 +44,49 @@ sudo systemctl reload nginx
 
 sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/myprojectLEMP/index.html
 
-http://44.201.205.94:80  (to edit and insert image) **NB** 
 
+http://44.201.205.94:80
+![image](https://user-images.githubusercontent.com/106885875/177115655-934c1c34-7e82-45d6-80cd-6eca9b279b39.png)
+![image](https://user-images.githubusercontent.com/106885875/177115793-0220694f-0c25-4c49-8438-6a8a21786760.png)
+
+
+  
   
 sudo nano /var/www/myprojectLEMP/info.php
   
-http://44.201.205.94:80/info.php
+![image](https://user-images.githubusercontent.com/106885875/177114983-b841d00f-bf78-4800-9854-1033ebfb7973.png)
 
 
-  
+ sudo rm var/www/myprojectLEMP/info.php
+ sudo mysql
+ sudo mysql -p
+ 
+ mysql> CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
+ 
+ GRANT ALL ON example_database.* TO 'example_user'@'%';
+ 
+ exit
+ 
+ mysql -u example_user -p
+mysql> SHOW DATABASES;
+
+CREATE TABLE example_database.todo_list (
+mysql>     item_id INT AUTO_INCREMENT,
+mysql>     content VARCHAR(255),
+mysql>     PRIMARY KEY(item_id)
+mysql> );
+
+INSERT INTO example_database.todo_list (content) VALUES ("My first important item");
+SELECT * FROM example_database.todo_list;
+
+nano /var/www/myprojectLEMP/todo_list.php
+
+
+https://44.201.205.94/todo_list.php
+![image](https://user-images.githubusercontent.com/106885875/177124189-36b2ee6e-3c45-423c-8691-70daf2dde6e3.png)
+
+
+
+
+ 
   
