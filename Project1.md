@@ -45,13 +45,11 @@ sudo systemctl reload nginx
 sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/myprojectLEMP/index.html
 
 http://44.201.205.94:80  (to edit and insert image) **NB** 
+
   
-sudo nano /var/www/projectLEMP/info.php
-  <?php
-phpinfo();
-
-http://44.201.205.94:80/info.php (to edit and insert image) **NB**
-
+sudo nano /var/www/myprojectLEMP/info.php
+  
+http://44.201.205.94:80/info.php
 
 
   
