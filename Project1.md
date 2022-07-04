@@ -1,6 +1,8 @@
 
 ## Project 2 ##
 
+# LEMP STACK IMPLEMENTATION #
+
 sudo apt update
 
 sudo apt install nginx
